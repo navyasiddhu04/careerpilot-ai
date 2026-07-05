@@ -1,21 +1,20 @@
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import HowItWorks from "../components/HowItWorks";
+import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 
 function Home() {
   return (
     <>
       <Navbar />
-
-      <main>
-        <h1>CareerPilot AI</h1>
-
-        <p>
-          Your AI Career Mentor
-        </p>
-
-        <button>Get Started</button>
-      </main>
-
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <Testimonials />
+      <FAQ />
       <Footer />
     </>
   );
