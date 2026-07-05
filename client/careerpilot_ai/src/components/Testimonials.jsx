@@ -1,15 +1,26 @@
 function Testimonials() {
   return (
-<section>
+    <section className="testimonials">
 
-<h2>Testimonials</h2>
+      <h2>What Students Say</h2>
 
-<p>
-"CareerPilot helped me get internship."
-</p>
+      <div className="testimonial-card">
+        <p>
+          "CareerPilot AI helped me improve my resume and prepare for interviews."
+        </p>
 
-</section>
+        <h4>- Rahul Sharma</h4>
+      </div>
 
+      <div className="testimonial-card">
+        <p>
+          "The roadmap feature made my learning journey much easier."
+        </p>
+
+        <h4>- Priya Verma</h4>
+      </div>
+
+    </section>
   );
 }
 
