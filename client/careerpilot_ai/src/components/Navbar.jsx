@@ -1,17 +1,27 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar">
 
-      <div className="logo">
-        CareerPilot AI
-      </div>
+      <h2 className="logo">
+        <Link to="/" className="logo-link">
+          CareerPilot AI
+        </Link>
+      </h2>
 
-      <ul className="nav-links">
-        <li>Home</li>
-        <li>Features</li>
-        <li>About</li>
-        <li>Login</li>
-      </ul>
+      <div className="nav-links">
+        <Link to="/">Home</Link>
+        <Link to="#features">Features</Link>
+
+        <Link to="/login" className="login-btn">
+          Login
+        </Link>
+
+        <Link to="/register" className="register-btn">
+          Register
+        </Link>
+      </div>
 
     </nav>
   );
