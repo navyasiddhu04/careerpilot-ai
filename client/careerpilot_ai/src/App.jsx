@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import ResumeBuilder from "./pages/ResumeBuilder";
+import AIResume from "./pages/AIResume";
+import CareerRoadmap from "./pages/CareerRoadmap";
 
 function App() {
 
@@ -35,6 +37,11 @@ function App() {
           element={<ResumeBuilder />} 
         />
 
+         <Route 
+            path="/ai-resume" 
+            element={<AIResume />} /> 
+
+<Route path="/career-roadmap" element={<CareerRoadmap />} />
       </Routes>
 
     </BrowserRouter>

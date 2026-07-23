@@ -6,7 +6,7 @@ const Resume = require("../models/Resume");
 const createResume = async (req, res) => {
   try {
     const resume = await Resume.create({
-      user: req.user,
+      user: req.user.id,
       ...req.body,
     });
 
@@ -27,7 +27,7 @@ const createResume = async (req, res) => {
 const getResume = async (req, res) => {
   try {
     const resume = await Resume.findOne({
-      user: req.user,
+      user: req.user.id,
     });
 
     if (!resume) {
@@ -80,7 +80,7 @@ const updateResume = async (req, res) => {
 const deleteResume = async (req, res) => {
   try {
     const resume = await Resume.findOneAndDelete({
-      user: req.user,
+      user: req.user.id,
     });
 
     if (!resume) {

@@ -26,6 +26,29 @@ function ResumeBuilder() {
     }
   };
 
+  const [loadingSummary, setLoadingSummary] = useState(false);
+
+const handleGenerateSummary = async () => {
+  setLoadingSummary(true);
+  try {
+    const res = await API.post("/ai/resume-summary", {
+      fullName: resume.fullName,
+      education: resume.education,
+      skills: resume.skills,
+      projects: resume.projects,
+      experience: resume.experience,
+    });
+
+    setResume({ ...resume, summary: res.data.summary });
+    alert("AI Summary generated!");
+  } catch (err) {
+    console.error(err);
+    alert(err.response?.data?.message || "Error generating summary");
+  } finally {
+    setLoadingSummary(false);
+  }
+};
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {

@@ -19,15 +19,16 @@ function Dashboard() {
           <p>    Create and manage your resume.</p>
         </Link>
 
-        <div className="card">
-          <h2>🤖 AI Resume</h2>
-          <p>Generate AI resume summary.</p>
-        </div>
+        <Link to="/ai-resume" className="card">
+  <h2>🤖 AI Resume</h2>
+  <p>Generate AI resume summary.</p>
+</Link>
 
-        <div className="card">
-          <h2>💼 Career Roadmap</h2>
-          <p>Personalized career guidance.</p>
-        </div>
+        
+<Link to="/career-roadmap" className="card">
+  <h2>💼 Career Roadmap</h2>
+  <p>Personalized career guidance.</p>
+</Link>  
 
         <div className="card">
           <h2>🎤 Interview Prep</h2>
