@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import ResumeBuilder from "./pages/ResumeBuilder";
 
 function App() {
+
   return (
     <BrowserRouter>
 
@@ -14,24 +15,26 @@ function App() {
 
         <Route path="/" element={<Home />} />
 
-        <Route
-          path="/login"
-          element={<Login />}
+        <Route 
+          path="/login" 
+          element={<Login />} 
         />
 
-        <Route
-          path="/register"
-          element={<Register />}
+        <Route 
+          path="/register" 
+          element={<Register />} 
         />
 
-        <Route
-          path="/dashboard"
-          element={<Dashboard />}
+        <Route 
+          path="/dashboard" 
+          element={<Dashboard />} 
         />
-<Route
-  path="/resume"
-  element={<ResumeBuilder />}
-/>
+
+        <Route 
+          path="/resume" 
+          element={<ResumeBuilder />} 
+        />
+
       </Routes>
 
     </BrowserRouter>
